@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"playground/fn"
-)
-
 func main() {
 	// // strings
 	// variables_n_string.Strs()
@@ -46,10 +41,12 @@ func main() {
 	// org2, upper2 := fn.GetInitials("Mirakurun")
 	// fmt.Printf("%v is upper to %v \n", org2, upper2)
 
+	// // Map
 	// fn.Maps()
 
-	name := "Akari"
-	fmt.Println(name)
-	fn.UpdateName(name)
-	fmt.Println(name)
+	// // Pass by value
+	// name := "Akari"
+	// fmt.Println(name)
+	// fn.UpdateName(name)
+	// fmt.Println(name)
 }
