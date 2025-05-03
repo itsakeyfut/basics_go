@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"playground/fn"
 )
 
@@ -39,10 +38,12 @@ func main() {
 	// fmt.Println(a1, a2)
 	// fmt.Printf("Circle 1 is %0.3f and circle 2 is %0.3f", a1, a2)
 
-	// Multiple Functions
-	org, upper := fn.GetInitials("Akari Akaza")
-	fmt.Printf("%v is upper to %v \n", org, upper)
+	// // Multiple Functions
+	// org, upper := fn.GetInitials("Akari Akaza")
+	// fmt.Printf("%v is upper to %v \n", org, upper)
 
-	org2, upper2 := fn.GetInitials("Mirakurun")
-	fmt.Printf("%v is upper to %v \n", org2, upper2)
+	// org2, upper2 := fn.GetInitials("Mirakurun")
+	// fmt.Printf("%v is upper to %v \n", org2, upper2)
+
+	fn.Maps()
 }
