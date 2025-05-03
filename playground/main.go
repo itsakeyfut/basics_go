@@ -1,8 +1,6 @@
 package main
 
-import (
-	"playground/loop_n_conditional"
-)
+import "playground/loop_n_conditional"
 
 func main() {
 	// // strings
@@ -23,6 +21,8 @@ func main() {
 	// // Standard Library
 	// variables_n_string.Stl()
 
-	// Loop
-	loop_n_conditional.ForLoop()
+	// // Loop
+	// loop_n_conditional.ForLoop()
+
+	loop_n_conditional.LogicalOperators()
 }
