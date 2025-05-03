@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"playground/fn"
 )
 
@@ -45,5 +46,10 @@ func main() {
 	// org2, upper2 := fn.GetInitials("Mirakurun")
 	// fmt.Printf("%v is upper to %v \n", org2, upper2)
 
-	fn.Maps()
+	// fn.Maps()
+
+	name := "Akari"
+	fmt.Println(name)
+	fn.UpdateName(name)
+	fmt.Println(name)
 }
