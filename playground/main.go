@@ -24,5 +24,6 @@ func main() {
 	// // Loop
 	// loop_n_conditional.ForLoop()
 
+	// Logical Operators and continue and break keyword in for looping
 	loop_n_conditional.LogicalOperators()
 }
