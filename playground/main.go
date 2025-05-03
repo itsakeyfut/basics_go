@@ -30,6 +30,7 @@ func main() {
 	// Logical Operators and continue and break keyword in for looping
 	// loop_n_conditional.LogicalOperators()
 
+	// Function
 	fn.CycleNames([]string{"cloud", "tifa", "barret"}, fn.SayGreeting)
 	fn.CycleNames([]string{"cloud", "tifa", "barret"}, fn.SayBye)
 
