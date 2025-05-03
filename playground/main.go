@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"playground/fn"
+	"playground/structs"
 )
 
 func main() {
@@ -55,14 +55,18 @@ func main() {
 	// fn.UpdateName(name)
 	// fmt.Println(name)
 
-	// Pointer
-	name := "Akari"
-	fn.UpdateRefName(&name)
-	fmt.Println("memory address of name is:", &name)
+	// // Pointer
+	// name := "Akari"
+	// fn.UpdateRefName(&name)
+	// fmt.Println("memory address of name is:", &name)
 
-	refName := &name
-	fmt.Println("memory address:", refName)
-	fmt.Println("value at memory address", *refName)
+	// refName := &name
+	// fmt.Println("memory address:", refName)
+	// fmt.Println("value at memory address", *refName)
 
-	fmt.Println(name)
+	// fmt.Println(name)
+
+	// Structs
+	myBill := structs.NewBill("mario")
+	fmt.Println(myBill)
 }
