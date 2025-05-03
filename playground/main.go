@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"playground/fn"
+)
+
 func main() {
 	// // strings
 	// variables_n_string.Strs()
@@ -49,4 +54,15 @@ func main() {
 	// fmt.Println(name)
 	// fn.UpdateName(name)
 	// fmt.Println(name)
+
+	// Pointer
+	name := "Akari"
+	fn.UpdateRefName(&name)
+	fmt.Println("memory address of name is:", &name)
+
+	refName := &name
+	fmt.Println("memory address:", refName)
+	fmt.Println("value at memory address", *refName)
+
+	fmt.Println(name)
 }
