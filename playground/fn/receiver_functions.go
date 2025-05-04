@@ -2,16 +2,16 @@ package fn
 
 import "fmt"
 
-type bill struct {
-	name  string
+type Bill struct {
+	Name  string
 	items map[string]float64
 	tip   float64
 }
 
 // make new bills
-func NewBill(name string) bill {
-	b := bill{
-		name:  name,
+func NewBill(name string) Bill {
+	b := Bill{
+		Name:  name,
 		items: map[string]float64{},
 		tip:   0,
 	}
@@ -20,7 +20,7 @@ func NewBill(name string) bill {
 }
 
 // format the bill
-func (b bill) Format() string {
+func (b Bill) Format() string {
 	fs := "Bill breakdown: \n"
 	var total float64 = 0
 
@@ -40,11 +40,11 @@ func (b bill) Format() string {
 }
 
 // Update tip
-func (b *bill) UpdateTip(tip float64) {
+func (b *Bill) UpdateTip(tip float64) {
 	(*b).tip = tip
 }
 
 // Add an item to the bill
-func (b *bill) AddItem(name string, price float64) {
+func (b *Bill) AddItem(name string, price float64) {
 	(*b).items[name] = price
 }

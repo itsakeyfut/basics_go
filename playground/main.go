@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"playground/fn"
+	"playground/user_input"
 )
 
 func main() {
@@ -70,11 +70,16 @@ func main() {
 	// myBill := structs.NewBill("mario")
 	// fmt.Println(myBill)
 
-	// Receiver Functions
-	myBill := fn.NewBill("mario")
-	myBill.AddItem("curry", 4.25)
-	myBill.AddItem("toffee pudding", 6.99)
-	myBill.UpdateTip(10)
+	// // Receiver Functions
+	// myBill := fn.NewBill("mario")
+	// myBill.AddItem("curry", 4.25)
+	// myBill.AddItem("toffee pudding", 6.99)
+	// myBill.UpdateTip(10)
 
-	fmt.Println(myBill.Format())
+	// fmt.Println(myBill.Format())
+
+	mybill := user_input.CreateBill()
+	user_input.PromptOptions(mybill)
+
+	fmt.Println(mybill)
 }
