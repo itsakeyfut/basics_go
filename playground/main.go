@@ -1,6 +1,9 @@
 package main
 
-import "playground/structs"
+import (
+	"fmt"
+	"playground/structs"
+)
 
 func main() {
 	// // strings
@@ -79,9 +82,17 @@ func main() {
 	// mybill := user_input.CreateBill()
 	// user_input.PromptOptions(mybill)
 
-	c := structs.Circle{Radius: 5}
-	r := structs.Rectangle{Width: 4, Height: 3}
+	// // Interfaces
+	// c := structs.Circle{Radius: 5}
+	// r := structs.Rectangle{Width: 4, Height: 3}
 
-	structs.PrintArea(c)
-	structs.PrintArea(r)
+	// structs.PrintArea(c)
+	// structs.PrintArea(r)
+
+	// Generics
+	circles := []structs.GCircle{{Radius: 5}, {Radius: 3}}
+	rects := []structs.GRectangle{{Width: 4, Height: 3}, {Width: 2, Height: 6}}
+
+	fmt.Printf("Total Circle Area: %.2f\n", structs.SumAreas(circles))
+	fmt.Printf("Total Rectangle Area: %.2f\n", structs.SumAreas(rects))
 }
