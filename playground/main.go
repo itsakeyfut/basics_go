@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"playground/structs"
+	"playground/fn"
 )
 
 func main() {
@@ -66,7 +66,15 @@ func main() {
 
 	// fmt.Println(name)
 
-	// Structs
-	myBill := structs.NewBill("mario")
-	fmt.Println(myBill)
+	// // Structs
+	// myBill := structs.NewBill("mario")
+	// fmt.Println(myBill)
+
+	// Receiver Functions
+	myBill := fn.NewBill("mario")
+	myBill.AddItem("curry", 4.25)
+	myBill.AddItem("toffee pudding", 6.99)
+	myBill.UpdateTip(10)
+
+	fmt.Println(myBill.Format())
 }
