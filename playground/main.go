@@ -1,8 +1,6 @@
 package main
 
-import (
-	"playground/user_input"
-)
+import "playground/structs"
 
 func main() {
 	// // strings
@@ -77,6 +75,13 @@ func main() {
 
 	// fmt.Println(myBill.Format())
 
-	mybill := user_input.CreateBill()
-	user_input.PromptOptions(mybill)
+	// Save Files
+	// mybill := user_input.CreateBill()
+	// user_input.PromptOptions(mybill)
+
+	c := structs.Circle{Radius: 5}
+	r := structs.Rectangle{Width: 4, Height: 3}
+
+	structs.PrintArea(c)
+	structs.PrintArea(r)
 }
