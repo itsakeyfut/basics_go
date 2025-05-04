@@ -1,0 +1,5 @@
+Bill breakdown: 
+monster: ...$3.99 
+monster pipeline punch: ...$3.99 
+tip:                      ...$2 
+total:                    ...$9.98

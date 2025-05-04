@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"playground/user_input"
 )
 
@@ -80,6 +79,4 @@ func main() {
 
 	mybill := user_input.CreateBill()
 	user_input.PromptOptions(mybill)
-
-	fmt.Println(mybill)
 }

@@ -28,37 +28,47 @@ func CreateBill() fn.Bill {
 
 func PromptOptions(b fn.Bill) {
 	reader := bufio.NewReader(os.Stdin)
-
-	opt, _ := getInput("Choose option (a - add item, s - save bill, t - add tip): ", reader)
 	
-	switch opt {
-	case "a":
-		name, _ := getInput("Item name: ", reader)
-		price, _ := getInput("Item price: ", reader)
+	for {
+		opt, _ := getInput("Choose option (a - add item, s - save bill, t - add tip): ", reader)
 
-		p, err := strconv.ParseFloat(price, 64)
-		if err != nil {
-			fmt.Println("The price must be a number")
-			PromptOptions(b)
+		switch opt {
+		case "a":
+			for {
+				name, _ := getInput("Item name: ", reader)
+				price, _ := getInput("Item price: ", reader)
+		
+				p, err := strconv.ParseFloat(price, 64)
+				if err != nil {
+					fmt.Println("The price must be a number")
+					continue
+				}
+				b.AddItem(name, p)
+		
+				fmt.Println("Item added - ", name, price)
+				break
+			}
+
+		case "t":
+			tip, _ := getInput("Enter tip amount ($): ", reader)
+	
+			t, err := strconv.ParseFloat(tip, 64)
+			if err != nil {
+				fmt.Println("The price must be a number")
+				continue
+			}
+			b.UpdateTip(t)
+	
+			fmt.Println("Tip added - ", tip)
+
+		case "s":
+			fmt.Println("You chose to save the bill", b)
+			b.Save()
+			return
+
+		default:
+			fmt.Println("That was not a valid option...")
+
 		}
-		b.AddItem(name, p)
-
-		fmt.Println("Item added - ", name, price)
-	case "t":
-		tip, _ := getInput("Enter tip amount ($): ", reader)
-
-		t, err := strconv.ParseFloat(tip, 64)
-		if err != nil {
-			fmt.Println("The price must be a number")
-			PromptOptions(b)
-		}
-		b.UpdateTip(t)
-
-		fmt.Println("Tip added - ", tip)
-	case "s":
-		fmt.Println("You chose to save the bill", b)
-	default:
-		fmt.Println("That was not a valid option...")
-		PromptOptions(b)
 	}
 }
